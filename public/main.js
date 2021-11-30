@@ -15,7 +15,7 @@
   \*********************/
 /***/ (() => {
 
-
+eval("alert(\"a votar hps\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdm90ZS5qcy5qcyIsIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZXMiOlsid2VicGFjazovL3BhcmNpYWwyZWNvLy4vc3JjL3ZvdGUuanM/MWZhOSJdLCJzb3VyY2VzQ29udGVudCI6WyJhbGVydChcImEgdm90YXIgaHBzXCIpOyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/vote.js\n");
 
 /***/ })
 
