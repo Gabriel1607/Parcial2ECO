@@ -24,6 +24,7 @@ function login(e, ev){
     })
     .catch((error) => {
         console.log(error.message);
+        alert("Error de autenticación, por favor intente nuevamente");
     });
 }
 

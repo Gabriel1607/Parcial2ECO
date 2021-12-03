@@ -7,4 +7,67 @@
     align-items: center;
     margin: 0 auto;
     
+    
 } 
+#title{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:large;
+ } 
+#subtitle{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+ } 
+ #bookList{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    text-align: center;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+ } 
+ #logout_btn,#login_btn{
+  background-color:rgb(116, 116, 218);
+  border-color: rgb(116, 116, 218);
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+ .bookCard{ 
+  flex-direction: row;
+  text-align: center;
+  background-color:rgb(4, 5, 29);
+  margin-top: 25px;
+
+  margin-bottom: 25px;
+  border-radius: 5px;
+
+}
+.bookTitle, .bookRating {
+  color:whitesmoke;
+  margin-top: 25px;
+  
+}
+
+
+.starbox li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  }
+  
+  .starbox li:hover,
+  .starbox li:hover ~ li {
+    color: #ffd700;
+  }
+  
+  .starbox {
+    display: inline-block;
+    list-style: none;
+  }

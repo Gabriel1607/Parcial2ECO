@@ -12,7 +12,8 @@
   "author": "Gabriel A. Mora",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.5.0"
+    "firebase": "^9.5.0",
+    "starry-rating": "^5.1.0"
   },
   "devDependencies": {
     "webpack": "^5.64.3",
