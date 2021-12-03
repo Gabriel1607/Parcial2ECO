@@ -1,6 +1,6 @@
 import {
     getDatabase, ref, set, onValue, push} from 'firebase/database';
-    import Starry from 'starry-rating'
+    import { getAuth, updateProfile } from "firebase/auth";
 
 
 export class bookCmpnt {
@@ -62,72 +62,143 @@ export class bookCmpnt {
             
             const db = getDatabase();
             const bookRef = ref(db, 'books/' + this.book.id);
-            
-            const calific = this.book.rating+1;
 
-            const updateBook = {
-                id:this.book.id,
-                rating: calific,
-                title: this.book.title,
-                votes: this.book.votes + 1
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const displayName = user.displayName;
+            console.log(user.displayName);
+            if(user.displayName==null){
+                updateProfile(auth.currentUser, {
+                    displayName: "YaVotó"
+                  }).then(() => {
+                    const calific = this.book.rating+1;
+
+                    const updateBook = {
+                        id:this.book.id,
+                        rating: calific,
+                        title: this.book.title,
+                        votes: this.book.votes + 1
+                    }
+                    set(bookRef, updateBook);
+                  }).catch((error) => {
+                    
+                  });
+            }else{
+                alert("Este usuario ya votó");
             }
-            set(bookRef, updateBook);
+            
         });
         starz2.addEventListener('click', (e, ev) =>{
             const db = getDatabase();
             const bookRef = ref(db, 'books/' + this.book.id);
 
-            const calific = this.book.rating+2;
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const displayName = user.displayName;
+            console.log(user.displayName);
+            if(user.displayName==null){
+                updateProfile(auth.currentUser, {
+                    displayName: "YaVotó"
+                  }).then(() => {
+                    const calific = this.book.rating+2;
 
-            const updateBook = {
-                id:this.book.id,
-                rating: calific,
-                title: this.book.title,
-                votes: this.book.votes + 1
+                    const updateBook = {
+                        id:this.book.id,
+                        rating: calific,
+                        title: this.book.title,
+                        votes: this.book.votes + 1
+                    }
+                    set(bookRef, updateBook);
+                  }).catch((error) => {
+                    
+                  });
+            }else{
+                alert("Este usuario ya votó");
             }
-            set(bookRef, updateBook);
         });
         starz3.addEventListener('click', (e, ev) =>{
             const db = getDatabase();
             const bookRef = ref(db, 'books/' + this.book.id);
 
-            const calific = this.book.rating+3;
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const displayName = user.displayName;
+            console.log(user.displayName);
+            if(user.displayName==null){
+                updateProfile(auth.currentUser, {
+                    displayName: "YaVotó"
+                  }).then(() => {
+                    const calific = this.book.rating+3;
 
-            const updateBook = {
-                id:this.book.id,
-                rating: calific,
-                title: this.book.title,
-                votes: this.book.votes + 1
+                    const updateBook = {
+                        id:this.book.id,
+                        rating: calific,
+                        title: this.book.title,
+                        votes: this.book.votes + 1
+                    }
+                    set(bookRef, updateBook);
+                  }).catch((error) => {
+                    
+                  });
+            }else{
+                alert("Este usuario ya votó");
             }
-            set(bookRef, updateBook);
         });
         starz4.addEventListener('click', (e, ev) =>{
             const db = getDatabase();
-            const bookRef = ref(db, 'books' +'/'+ this.book.id);
+            const bookRef = ref(db, 'books/' + this.book.id);
 
-            const calific = this.book.rating+4;
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const displayName = user.displayName;
+            console.log(user.displayName);
+            if(user.displayName==null){
+                updateProfile(auth.currentUser, {
+                    displayName: "YaVotó"
+                  }).then(() => {
+                    const calific = this.book.rating+4;
 
-            const updateBook = {
-                id:this.book.id,
-                rating: calific,
-                title: this.book.title,
-                votes: this.book.votes + 1
+                    const updateBook = {
+                        id:this.book.id,
+                        rating: calific,
+                        title: this.book.title,
+                        votes: this.book.votes + 1
+                    }
+                    set(bookRef, updateBook);
+                  }).catch((error) => {
+                    
+                  });
+            }else{
+                alert("Este usuario ya votó");
             }
-            set(bookRef, updateBook);
         });
         starz5.addEventListener('click', (e, ev) =>{
             const db = getDatabase();
             const bookRef = ref(db, 'books/' + this.book.id);
 
-            const calific = this.book.rating+5;
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const displayName = user.displayName;
+            console.log(user.displayName);
+            if(user.displayName==null){
+                updateProfile(auth.currentUser, {
+                    displayName: "YaVotó"
+                  }).then(() => {
+                    const calific = this.book.rating+5;
 
-            const updateBook = {
-                id:this.book.id,
-                rating: calific,
-                title: this.book.title,
-                votes: this.book.votes + 1
+                    const updateBook = {
+                        id:this.book.id,
+                        rating: calific,
+                        title: this.book.title,
+                        votes: this.book.votes + 1
+                    }
+                    set(bookRef, updateBook);
+                  }).catch((error) => {
+                    
+                  });
+            }else{
+                alert("Este usuario ya votó");
             }
-            set(bookRef, updateBook);
         });
 
         return bookCard;

@@ -30,11 +30,11 @@ function login(e, ev){
 
 login_btn.addEventListener("click", login);
 
-/*onAuthStateChanged(auth, (user_account)=>{
+onAuthStateChanged(auth, (user_account)=>{
     if (user_account){
         // Hay usuario logueado
         console.log("account", user_account);
-        window.location.href = "vote.html"
+        //window.location.href = "vote.html"
     }
 });
-*/
+
