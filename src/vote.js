@@ -29,7 +29,6 @@ function updateBooks(info) {
     
             const book = new bookCmpnt(info[k]);
             //Por cada libro que haya crea un componente
-            console.log(book.title);
             bookList.appendChild(book.render());
         });
     }

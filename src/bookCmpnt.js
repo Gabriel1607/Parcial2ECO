@@ -103,7 +103,7 @@ export class bookCmpnt {
         });
         starz4.addEventListener('click', (e, ev) =>{
             const db = getDatabase();
-            const bookRef = ref(db, 'books/' + this.book.id);
+            const bookRef = ref(db, 'books' +'/'+ this.book.id);
 
             const calific = this.book.rating+4;
 
